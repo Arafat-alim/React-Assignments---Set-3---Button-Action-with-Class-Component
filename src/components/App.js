@@ -28,7 +28,7 @@ class App extends Component {
         ) : (
           <p id="para">{this.state.message}</p>
         )}
-        <button onClick={() => this.onChange()}>Click Me</button>
+        <button id="click" onClick={() => this.onChange()}>Click Me</button>
 	
 	
     		</div>
