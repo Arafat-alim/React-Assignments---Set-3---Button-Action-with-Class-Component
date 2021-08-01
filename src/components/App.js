@@ -7,7 +7,7 @@ class App extends Component {
 
     this.state = {
       isClick: true,
-      message: " ",
+      message: "",
     };
   }
 	
@@ -24,7 +24,7 @@ class App extends Component {
     		<div id="main">
 				{ /* Do not remove this main div!! */ }
 	 {this.state.isClick ? (
-          <p id="para">Hello Guys</p>
+          <p id="para">Change Me!!</p>
         ) : (
           <p id="para">{this.state.message}</p>
         )}
