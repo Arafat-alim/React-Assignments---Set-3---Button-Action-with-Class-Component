@@ -6,33 +6,30 @@ class App extends Component {
     super(props);
 
     this.state = {
-      isClick: false,
-      //   message: "",
+      isClick: true,
+      message: "",
     };
   }
-	
-onChange() {
+  onChange() {
+    this.setState({ isClick: !this.state.isClick });
     this.setState({
-      isClick: !this.state.isClick,
       message:
         "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy",
     });
-    // this.setState({
-    //   message:
-    //     "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy",
-    // });
   }
 
     render() {
     	return(
     		<div id="main">
 				{ /* Do not remove this main div!! */ }
-  	<p id="para">{this.state.message}</p>
+          {this.state.isClick ? (
+          <p id="para">Change Me!!</p>
         ) : (
-          <p id="para">Change Me</p>
+          <p id="para">{this.state.message}</p>
         )}
-
-        <button onClick={() => this.onChange()}>Click Me</button>
+        <button id="click" onClick={() => this.onChange()}>
+          Click Me
+        </button>
 	
 	
     		</div>
