@@ -2,33 +2,37 @@ import React, {Component, useState} from "react";
 import '../styles/App.css';
 
 class App extends Component {
-   constructor(props) {
+  constructor(props) {
     super(props);
 
     this.state = {
-      isClick: true,
-      message: "",
+      isClick: false,
+      //   message: "",
     };
   }
 	
- onChange() {
-    this.setState({ isClick: !this.state.isClick });
+onChange() {
     this.setState({
+      isClick: !this.state.isClick,
       message:
         "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy",
     });
+    // this.setState({
+    //   message:
+    //     "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy",
+    // });
   }
 
     render() {
     	return(
     		<div id="main">
 				{ /* Do not remove this main div!! */ }
-	 {this.state.isClick ? (
-          <p id="para">Change Me!!</p>
+  	<p id="para">{this.state.message}</p>
         ) : (
-          <p id="para">{this.state.message}</p>
+          <p id="para">Change Me</p>
         )}
-        <button id="click" onClick={() => this.onChange()}>Click Me</button>
+
+        <button onClick={() => this.onChange()}>Click Me</button>
 	
 	
     		</div>
